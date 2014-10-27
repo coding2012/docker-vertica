@@ -14,10 +14,10 @@ docker build -t bluelabs/vertica .
 
 ### To run without a persistent datastore
 ```bash
-docker run -P  bluelabs/vertica
+docker run -p 5433:5433  bluelabs/vertica
 ```
 
 ### To run with a persistent datastore
 ```bash
-docker run -P -v /path/to/vertica_data:/home/dbadmin/docker bluelabs/vertica
+docker run -p 5433:5433 -v /path/to/vertica_data:/home/dbadmin/docker bluelabs/vertica
 ```
